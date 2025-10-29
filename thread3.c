@@ -6,18 +6,15 @@
 #include <unistd.h>
 #include <pthread.h>
 
-void *myfunc(void *arg)
-{
-        for(int i = 0 ; i < 5 ; i++)
-        {
+void *myfunc(void *arg){
+        for(int i = 0 ; i < 5 ; i++){
                 printf("My Thread \n");
                 sleep(1);
         }
         return NULL;
 }
 
-int main()
-{
+int main(){
         pthread_t t1;
         pthread_create(&t1 , NULL, myfunc , NULL);
 
