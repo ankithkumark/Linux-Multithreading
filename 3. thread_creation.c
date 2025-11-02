@@ -7,17 +7,17 @@
 #include <pthread.h>
 
 void *myfunc(void *arg){
-        for(int i = 0 ; i < 5 ; i++){
-                printf("My Thread \n");
-                sleep(1);
-        }
-        return NULL;
+    for(int i = 0 ; i < 5 ; i++){
+        printf("My Thread \n");
+        sleep(1);
+    }
+    return NULL;
 }
 
 int main(){
-        pthread_t t1;
-        pthread_create(&t1 , NULL, myfunc , NULL);
+    pthread_t t1;
+    pthread_create(&t1 , NULL, myfunc , NULL);
 
-        sleep(2);
-        return 0;
+    sleep(2);
+    return 0;
 }
