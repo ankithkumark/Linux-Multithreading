@@ -1,8 +1,10 @@
+// There is a problem in this code as the main thread completes before the thread t1.
+
 #include<stdio.h>
 #include<pthread.h>
 
 void *myfunc(void *arg){
-    printf("My Thread\n");
+    printf("My Thread \n");
     return NULL;
 }
 
@@ -12,5 +14,3 @@ int main(){
 
     return 0;
 }
-
-// There is a problem in this code as main thread completes before child thread.
